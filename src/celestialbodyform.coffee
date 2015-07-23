@@ -28,7 +28,7 @@ class CelestialBodyForm
       $('#referenceBodySelect', @form).val(referenceBody.name()).prop('disabled', true)
       $('.modal-header h4', @form).text("New destination orbiting #{referenceBody.name()}")
     else
-      $('#referenceBodySelect', @form).val('Kerbol').prop('disabled', false)
+      $('#referenceBodySelect', @form).val('Sun').prop('disabled', false)
       $('.modal-header h4', @form).text("New origin body")
     
     $('#bodyName', @form).val('').removeData('originalValue')
