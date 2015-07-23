@@ -1,7 +1,7 @@
 class KerbalTime
-  # Default to Kerbin time
-  @hoursPerDay: 6
-  @daysPerYear: 426
+  # Default to Earth time
+  @hoursPerDay: 24
+  @daysPerYear: 365
   
   @setDateFormat: (@hoursPerDay, @daysPerYear) -> $(@).trigger('dateFormatChanged')
   

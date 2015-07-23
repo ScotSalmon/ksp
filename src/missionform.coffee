@@ -43,8 +43,8 @@
       addPlanetGroup(name, originGroup, originSelect, 2)
       addPlanetGroup(name, referenceBodyGroup, referenceBodySelect, 1)
   
-  # Select Kerbin as the default origin, or the first option if Kerbin is missing
-  originSelect.val('Kerbin')
+  # Select Earth as the default origin, or the first option if Earth is missing
+  originSelect.val('Earth')
   originSelect.prop('selectedIndex', 0) unless originSelect.val()?
 
 class MissionForm
@@ -59,8 +59,8 @@ class MissionForm
     
     $('#originSelect').change (event) => @setOrigin($(event.target).val())
     $('#destinationSelect').change (event) => @setDestination($(event.target).val())
-    @setOrigin('Kerbin')
-    @setDestination('Duna')
+    @setOrigin('Earth')
+    @setDestination('Mars')
     
     $('#originAddBtn').click (event) => @celestialBodyForm.add()
     $('#originEditBtn').click (event) => @celestialBodyForm.edit(@origin())
@@ -80,7 +80,7 @@ class MissionForm
     $('#shortestTimeOfFlight,#longestTimeOfFlight').change (event) ->
       setTimeOfFlight(+$('#shortestTimeOfFlight').val(), +$('#longestTimeOfFlight').val(), event.target.id == 'shortestTimeOfFlight')
     
-    @form.bind 'reset', (event) => setTimeout((=> setOrigin('Kerbin'); setDestination('Duna')), 0)
+    @form.bind 'reset', (event) => setTimeout((=> setOrigin('Earth'); setDestination('Mars')), 0)
     @form.submit ((event) => event.preventDefault(); $(@).trigger('submit'))
   
   origin: ->
