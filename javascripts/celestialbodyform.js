@@ -69,7 +69,7 @@
         $('#referenceBodySelect', this.form).val(referenceBody.name()).prop('disabled', true);
         $('.modal-header h4', this.form).text("New destination orbiting " + (referenceBody.name()));
       } else {
-        $('#referenceBodySelect', this.form).val('Kerbol').prop('disabled', false);
+        $('#referenceBodySelect', this.form).val('Sun').prop('disabled', false);
         $('.modal-header h4', this.form).text("New origin body");
       }
       $('#bodyName', this.form).val('').removeData('originalValue');
