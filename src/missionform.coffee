@@ -55,7 +55,7 @@ class MissionForm
     
     $('#earthTime').click (=> KerbalTime.setDateFormat(24, 365); updateAdvancedControls.call(@))
     $('#kerbinTime').click (=> KerbalTime.setDateFormat(6, 426); updateAdvancedControls.call(@))
-    $('#earthTime').click() if $('#earthTime').prop('checked')
+    $('#kerbinTime').click() if $('#kerbinTime').prop('checked')
     
     $('#originSelect').change (event) => @setOrigin($(event.target).val())
     $('#destinationSelect').change (event) => @setDestination($(event.target).val())

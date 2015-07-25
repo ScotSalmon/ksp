@@ -81,8 +81,8 @@
           return updateAdvancedControls.call(_this);
         };
       })(this)));
-      if ($('#earthTime').prop('checked')) {
-        $('#earthTime').click();
+      if ($('#kerbinTime').prop('checked')) {
+        $('#kerbinTime').click();
       }
       $('#originSelect').change((function(_this) {
         return function(event) {
